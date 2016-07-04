@@ -1,19 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router'
+import NavLink from './NavLink'
 
-const Repos = () => {
+const Repos = (props) => {
   return (
     <div>
       <h2>Repos</h2>
 
       <ul>
         <li>
-          <Link to='repos/reactjs/react-router'>React Router</Link>
+          <NavLink to='repos/reactjs/react-router'>
+            React Router
+          </NavLink>
         </li>
         <li>
-          <Link to='repos/facebook/react'>React</Link>
+          <NavLink to='repos/facebook/react'>
+            React
+          </NavLink>
         </li>
       </ul>
+
+      {props.children}
     </div>
   )
 }
